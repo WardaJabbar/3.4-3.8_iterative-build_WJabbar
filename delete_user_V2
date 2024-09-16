@@ -1,18 +1,33 @@
-
 <!DOCTYPE html>
 <html lang = "en">
+	
 	<head>
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
 		<meta charset = "utf-8" />
 		<title>Delete User</title>
+		
+		<!-- Link to CSS files for styling the page -->
 		<link rel="stylesheet" type="text/css" href="css/queries.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
 	</head>
+	
+	<style>
+		::placeholder{
+			color: white;
+			padding: 15px;
+		}
+	</style>
+	
 	<body>
+		<div class = "main_container">
 		
 	<!-- Include the main navigation for the website -->
 	<?php
 	// Requires the nav.php file for site navigation
-	require "nav.php" //'require' is necessary to include this file for the site to run
+	require "nav-graeme.php" //'require' is necessary to include this file for the site to run
 	?>
 		
 	<!-- This is the admin-specific navigation -->
@@ -20,18 +35,21 @@
 	//Pulls the links from the nav_admin.php page and places them in the navigation div
 	require "nav_admin.php" //'require' is necessary to include this file for admin functionalities
 	?>
-				<!-- Page title section -->
-				<div class="title"><!-- Holds the page title -->
-					<h1 style = "padding-top:100px;"><center>Delete User</center></h1>
-				</div>
 						<!-- This is the form to submit the username for deletion -->
-						<form method = "post" id = "delete_user.php" > 
+						<center><form method = "post" id = "delete_user.php" style = "background-color:grey; max-width: 500px; margin: 0 auto;" > 
+							
+						<!-- Page title section -->
+							<div class="title"><!-- Holds the page title -->
+								<h1 style = "padding-top:20px; padding-bottom: 40px;max-width: 600px">Want to delete a user?</h1>
+							</div>
+							
 							<!-- I have created here, an input field so users can enter the username to be deleted -->
-							<h4><label for = 'login'>User Name:</label>
-							<input type="text" name = "UserName" placeholder="Enter user name"/></h4>
+							<h4>
+							<input type="text" name = "UserName" style = "font-size: 26px;border: 2px solid white; background-color:transparent" placeholder="Enter user name"/></h4><br>
+							
 							<!-- This is the submit button to trigger the deletion process -->
-							<h4><input type="submit" value="Delete" /></h4>
-						</form>
+							<h4><button style = "height: 40px; width: 320px;margin-bottom: 20px;font-size:20px;">Delete</button></h4>
+							</form></center>
 		
 							<!-- This area is the PHP section to handle the form submission and deletion logic -->
 							<?php
@@ -64,10 +82,23 @@
 								}
 								}
 							?>
+			
+<!--Javascript for burger Menu responsive design-->
+<script>
+function burgermenu() {
+  var x = document.getElementById("navbar11");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
 				
 				<!-- Footer section with copyright information -->
 				<div class="footer"><!-- Holds the foot notes -->
 					<p>&copy;Warda Jabbar 2024</p>
 				</div>
+		</div>
 	</body>
 </html>
