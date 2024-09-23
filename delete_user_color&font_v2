@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "en">
+	
+	<head>
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<meta charset = "utf-8" />
+		<title>Delete User</title>
+		
+		<!-- Link to CSS files for styling the page -->
+		<link rel="stylesheet" type="text/css" href="css/queries.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<!-- Link to google fonts to style my texts -->
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Magra:wght@400;700&family=Michroma&family=Monda:wght@400..700&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+		</style>
+		
+	</head>
+	
+	<body style = "background-color:#4B6172;">
+		<div class = "main_container">
+		
+	<!-- Include the main navigation for the website -->
+	<?php
+	// Requires the nav.php file for site navigation
+	require "nav-graeme.php" //'require' is necessary to include this file for the site to run
+	?>
+		
+	<!-- This is the admin-specific navigation -->
+	<?php
+	//Pulls the links from the nav_admin.php page and places them in the navigation div
+	require "nav_admin.php" //'require' is necessary to include this file for admin functionalities
+	?>
+			
+					<div class="form">
+						<!-- This is the form to submit the username for deletion -->
+						<center><form method = "post" id = "delete_user.php"> 
+							
+						<!-- Page title section -->
+							<div class="title"><!-- Holds the page title -->
+								<h1 style = "padding-top:50px;">WANT TO DELETE A USER?</h1><br>
+							</div>
+							
+							<!-- I have created here, an input field so users can enter the username to be deleted -->
+							<h4>
+							<input type="text" name = "UserName" placeholder="Enter user name"/></h4><br>
+							
+							<!-- This is the submit button to trigger the deletion process -->
+							<h4><button class = "button">DELETE</button></h4>
+							</form></center>
+			       </div>
+							<!-- This area is the PHP section to handle the form submission and deletion logic -->
+							<?php
+								// Must include the database connection file
+								require "13CSI_Database_Assessment_mysqli.php";
+								
+								// Checking if the form has been submitted with the 'UserName' field filled
+								if (isset($_POST['UserName'])){
+									
+								// Now we capture the username submitted by the user
+								$UserID = $_POST["UserName"]; 
+								
+								// This is SQL query to check if the user exists in the database
+								$checkquery = "SELECT * FROM users WHERE User_ID = '$UserID'";
+								$result3 = mysqli_query($conn, $checkquery);
+
+								/*If we find the users name recorded in the table, it will delete their data/entry from the table*/
+								if (mysqli_num_rows($result3) > 0){
+									
+									// This SQL query will delete the user from the 'users' table
+									$query11 = "DELETE FROM users WHERE User_ID = '$UserID'";
+									$result2 = mysqli_query($conn, $query11);
+									
+									// Displaying the success message if the deletion is successful
+									echo "<h3>Deleted successfully</h3>";
+								}
+									// If the user does not exist, it will display an error message
+									else{
+										echo "<h3>User does not exist</h3> ";
+								}
+								}
+							?>
+			
+<!--Javascript for burger Menu responsive design-->
+<script>
+function burgermenu() {
+  var x = document.getElementById("navbar11");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+<!-- Footer section with copyright information -->
+<div class="footer" style = "margin-top:0 auto;"><!-- Holds the foot notes -->
+	<p>&copy; Copyright Warda Jabbar 2024</p>
+			</div>
+		</div>
+	</body>
+</html>
