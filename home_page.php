@@ -59,8 +59,8 @@
 			</header>
 			
 			<!-- Section 1: Background image display -->
-			<div class="section1"style = "background-color:gray;">
-				<img src="">
+			<div class="section1">
+				<img src="Images/concert_image.jpg">
 			</div>
 
 			<!-- Section 2: View Songs Section with a Slick Slider -->
@@ -71,26 +71,27 @@
 				<!-- Song slider container -->
 				<div class = "fit_slider">
 					<div class="slider_main">
+						
 						<!-- Slider for main song images/content -->
 						<div class="slider slider-for">
 						</div>
 						
-						<!-- Slider navigation thumbnails (no images currently in placeholders) -->
+						<!-- Slider navigation thumbnails -->
 						<div class="slider slider-nav">
 							<div>
-								<h3><img></h3>
+								<h3><img src = "Images/neon-street-light.jpg"></h3>
 							</div>
 							<div>
-								<h3><img></h3>
+								<h3><img src = "Images/singer_image.jpg"></h3>
 							</div>
 							<div>
-								<h3><img></h3>
+								<h3><img src = "Images/disk_record.jpg"></h3>
 							</div>
 							<div>
-								<h3><img></h3>
+								<h3><img src = "Images/headphones.jpg"></h3>
 							</div>
 							<div>
-								<h3><img></h3>
+								<h3><img src = "Images/guy_view.jpg"></h3>
 							</div>
 						</div>
 					</div>
@@ -99,18 +100,19 @@
 			
 			<!-- Genre slider section -->
 			<div class="slider-container-genre">
+				
 				<h1>Genres</h1>
+				
 				<div class="slider11">
 					<!-- Individual genre slides -->
 					<div class="slide12 activeclass">
-						<div class="div11">Image</div>
+						<div class="div11"><img src = "Images/Folk.jpg"></div>
 					</div>
 					<div class="slide12">
-						<div class="div22">Image</div>
-						<img class = "img1">
+						<div class="div22"><img src = "Images/jazz.jpg"></div>
 					</div>
 					<div class="slide12">
-						<div class="div33">Image</div>
+						<div class="div33"><img src = "Images/pop_music.jpg"></div>
 					</div>
 				</div>
 				
@@ -128,7 +130,7 @@
 				$('.slider-for').slick({
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					arrows: false,
+					arrows: true,
 					fade: true,
 					asNavFor: '.slider-nav' });
 				$('.slider-nav').slick({
