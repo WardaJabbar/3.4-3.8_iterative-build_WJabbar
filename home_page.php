@@ -1,179 +1,84 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- Link to external CSS stylesheet -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		
-		<!-- Link to AOS library for animations -->
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		
-		<!-- Meta tags for charset and responsiveness -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- Page title -->
-		<title>Graeme Page</title>
+<html lang = "en">
+<head>
+	
+	<meta charset = "utf-8" />
+	<title>Graeme Query1</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/queries.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Link to google fonts to style my texts -->
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Magra:wght@400;700&family=Michroma&family=Monda:wght@400..700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+	</style>
+</head>
 
-		<!-- jQuery library -->
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-		
-		<!-- Slick carousel library for slider functionality -->
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
-		
-		<!-- Reset CSS to ensure consistency across browsers -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-		
-		<!-- Slick carousel CSS for the main slider -->
-		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
-		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
-		
-		<!-- Link to google fonts to style my texts -->
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Magra:wght@400;700&family=Michroma&family=Monda:wght@400..700&display=swap');
-			@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-			@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-		</style>
+<body style = "background-color:#4B6172;">
+	<div class ="main_container">
+	<?php
+	//Pulls the links from the nav.php page and places them in the navigation div
+	require "nav-graeme.php" //'require' is 100% needed for the site to run 
+	?>
+	<?php
+	//Pulls the links from the nav.php page and places them in the navigation div
+	require "nav_admin.php" //'require' is 100% needed for the site to run 
+	?>
 
-	</head>
-
-
-	<body>	
-	<div class = "main_container">
-		<!-- Slideshow container (main content) -->
-		<div class="slideshow-container">
-
-			<!-- Navbar and Header with the title "Graeme's Music" -->
-			<header class="header">
-					<!-- Page title -->
-						<?php
-						// Include the navigation bar for Graeme's specific user experience
-						// Top navigation for Graeme
-						require "nav-graeme.php" //'require' is 100% needed for the site to run 
-						?>
-						<?php
-						// Include the admin navigation options if the user has admin privileges
-						// Admin-specific navigation
-						require "nav_admin.php" //'require' is 100% needed for the site to run 
-						?>
-			</header>
-			
-			<!-- Section 1: Background image display -->
-			<div class="section1"style = "background-color:gray;">
-				<img src="">
-			</div>
-
-			<!-- Section 2: View Songs Section with a Slick Slider -->
-			<div class = "section2">
-				<h1>View the songs</h1>
-				<h2>Feel The Rhythm</h2>
-
-				<!-- Song slider container -->
-				<div class = "fit_slider">
-					<div class="slider_main">
-						<!-- Slider for main song images/content -->
-						<div class="slider slider-for">
-						</div>
-						
-						<!-- Slider navigation thumbnails (no images currently in placeholders) -->
-						<div class="slider slider-nav">
-							<div>
-								<h3><img></h3>
-							</div>
-							<div>
-								<h3><img></h3>
-							</div>
-							<div>
-								<h3><img></h3>
-							</div>
-							<div>
-								<h3><img></h3>
-							</div>
-							<div>
-								<h3><img></h3>
-							</div>
-						</div>
-					</div>
+				<div class="title"><!-- Holds the page title -->
+					<h1 style = "padding-top:30px;padding-bottom:60px;font-size:40px;letter-spacing: 2px; color:#9CCDFB;"><center>MUSIC QUERY 1</center></h1>
 				</div>
-			</div>
-			
-			<!-- Genre slider section -->
-			<div class="slider-container-genre">
-				<h1>Genres</h1>
-				<div class="slider11">
-					<!-- Individual genre slides -->
-					<div class="slide12 activeclass">
-						<div class="div11">Image</div>
-					</div>
-					<div class="slide12">
-						<div class="div22">Image</div>
-						<img class = "img1">
-					</div>
-					<div class="slide12">
-						<div class="div33">Image</div>
-					</div>
-				</div>
-				
-				<!-- Slider indicators (dots to navigate between genre slides) -->
-				<div class="indicators">
-					<span class="dot11 activeclass" data-slide="0"></span>
-					<span class="dot11" data-slide="1"></span>
-					<span class="dot11" data-slide="2"></span>
-				</div>
-			</div>
+<div class = "headings2">
+	<div class = "headings2b">Title</div>
+	<div class = "headings2b">Artist</div>
+	<div class = "headings2b">Duration</div>
+	<div class = "headings2b">Track</div>
+	<div class = "headings2b">Genre</div>
+	<div class = "headings2b">Album</div>
+</div>
+<?php
 
-			<!-- Slick slider script code for the song section -->
-			<script>
-				// Initialize slick slider for main song display and navigation
-				$('.slider-for').slick({
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					arrows: false,
-					fade: true,
-					asNavFor: '.slider-nav' });
-				$('.slider-nav').slick({
-					slidesToShow: 4,
-					slidesToScroll: 1,
-					asNavFor: '.slider-for',
-					dots: true,
-					focusOnSelect: true });
-			</script>
+$conn = new mysqli('localhost', '_WardaJ', '2gAHU60eiJpIwM9Q', 'WardaJ_13CSI_Database_Assessment');
 
-			<!-- This is the javascript for the genre section slider element-->
-			<script>
-				document.addEventListener('DOMContentLoaded', () => {
-					let currentIndex = 0; // We track the current active slide
-					const slides = document.querySelectorAll('.slide12'); // All genre slides
-					const dots = document.querySelectorAll('.dot11'); // These are the navigation dots
+/* If its not working it will show a "die" message.*/
+if (! $conn){
+	die("Connection failed" . mysqli_connect_error());
+}
+/* Creating a query which will check where the user name is being inputed*/
+$checkquery = "SELECT song_details.Title, artist.Artist, song_details.Duration, song_details.Track, genre.Genre, album.Album
+FROM song_details
+INNER JOIN song2artist ON song2artist.Song_ID = song_details.Song_ID
+INNER JOIN artist ON artist.Artist_ID = song2artist.Artist_ID
+INNER JOIN song2genre ON song2genre.Song_ID = song_details.Song_ID
+INNER JOIN genre on genre.Genre_ID = song2genre.Genre_ID
+INNER JOIN album ON album.Album_ID = song_details.Album_ID
+ORDER BY song_details.Title DESC, artist.Artist DESC";
+$result3 = mysqli_query($conn, $checkquery); 
+while($output = mysqli_fetch_assoc($result3)){
+	
+	/* This is the code to display all the inputs for each of the placeholders */
+	?>
 
-					// Function to display the correct slide and highlight the correct dot
-					const showSlide = (index) => {
-						slides.forEach((slide, i) => {
-							// Remove active class from all slides and dots
-							slide.classList.remove('activeclass');
-							dots[i].classList.remove('activeclass');
-							
-							// Add active class to the current slide and dot
-							if (i === index) {
-								slide.classList.add('activeclass');
-								dots[i].classList.add('activeclass');
-							}
-						});
-					};
-					
-					// Event listeners to update slide when a dot is clicked
-					dots.forEach((dot, index) => {
-						dot.addEventListener('click', () => {
-							currentIndex = index;
-							showSlide(currentIndex);
-						});
-					});
-					
-					// Show the first slide on page load
-					showSlide(currentIndex);
-				});
 
-			</script>
+	<div class = "flex-container">
+					<div class = "flex-item"><p><?php echo $output['Title']; ?></p></div>
+					<div class = "flex-item"><p><?php echo $output['Artist']; ?></p></div>
+					<div class = "flex-item"><p><?php echo $output['Duration']; ?></p></div>
+					<div class = "flex-item"><p><?php echo $output['Track']; ?></p></div>
+					<div class = "flex-item"><p><?php echo $output['Genre']; ?></p></div>
+					<div class = "flex-item"><p><?php echo $output['Album']; ?></p></div>
+	</div>
+
+				<?php
+}
+
+mysqli_close($conn);
+?>
+		
+<!--Javascript for burger Menu responsive design-->
 <script>
 function burgermenu() {
   var x = document.getElementById("navbar11");
@@ -184,11 +89,10 @@ function burgermenu() {
   }
 }
 </script>
+		
 <div class="footer"><!-- Holds the foot notes -->
-	<p>&copy; Copyright Warda Jabbar 2024</p></div>
-		</div>
-		</div>
-	</body>
+	<p>&copy;Copyright Warda Jabbar 2024</p>
+</div>
+	</div>
+		</body>
 </html>
-
-
